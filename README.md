@@ -1,15 +1,17 @@
-## Sample JavaFX Gradle Application [![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+# Java FX project ready for Graphic UI design tool GLUON Scene Builder.
+- Requirements download Scene Builder: (https://gluonhq.com/products/scene-builder/).
+- Download IntelliJ IDEA or other IDE with integrated Gradle tool or install it locally.
+- Clone project and later run this command in terminal ```gradlew clean run``` or ```./gradlew clean run``` if you using gradle wrapper leave w suffix.
+# Folder Structure 
+- HomeController main Controller class for Home.fxml file.
+- Main class entry/driver class for load Home.fxml and custom style.css.
+- build.gradle project settings if need more modules used here is place to add it.
+- module-info.java some modules for java FX FXML file use and core tools. 
+# IMPORTANT 
+- When using new Controller class or other FXML files you must add manually controller class to root element in FXML file
+  EXAMPLE. ```html <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eif.viko.lt.javafxgradle.starter.controller.HomeController">```
 
-A simple JavaFX application based off the [OpenJFX getting started documentation](https://openjfx.io/openjfx-docs/) that uses Gradle as the build system.
 
-The project was created using the standard IntelliJ IDEA project wizard for creating Gradle projects.
 
-This is a modular application, i.e. it uses Java Modules (Java 9 modularity / Jigsaw). There's a bit of finessing to do on the Gradle side to support this, specifically I can't use the [JavaFX Gradle plugin](https://github.com/openjfx/javafx-gradle-plugin) as there's a [known issue using this with a version of Gradle higher than 6.5](https://github.com/openjfx/javafx-gradle-plugin/issues/89) (this project uses Gradle 6.8). I combined the workaround detailed in that ticket with [this StackOverflow answer](https://stackoverflow.com/a/65209664/653519) to create a Gradle build file that works with JavaFX, Java 15 and modules.
 
-It might be easier with Gradle projects to not use modularity, but if we do then the application runs exactly as you'd expect from the command line:
 
-    ./gradlew clean run
-
-and by running the application class itself in IntelliJ IDEA. It also works as expected from the Gradle tool window.
-
-This seems to be the best approach to take to get a JavaFX application working with Gradle and IntelliJ IDEA.
