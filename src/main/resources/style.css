@@ -1,0 +1,16 @@
+.button{
+    -fx-background-color: #4894e8;
+    -fx-font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+    -fx-text-fill: white;
+    -fx-font-size: 15pt;
+}
+.root{
+    -fx-background-color: rgba(0, 0, 0, 0.23);
+}
+.menu{
+    -fx-background-color: #4894e8;
+    -fx-font-size: 15pt;
+}
+.menu-bar{
+    -fx-background-color: #4894e8;
+}
